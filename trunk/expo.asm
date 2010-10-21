@@ -23,7 +23,6 @@ asm_main:
 	ret
 
 cal_decimal:
-	dump_regs 33
 	push ebp
 	mov ebp,esp
 	;mov ecx, [ebp+12]	;exponente
@@ -31,13 +30,11 @@ cal_decimal:
 	mov edx,0			;resultado final
 	mov edi,3			;variable de control
 
-
 while_loop:
 	cmp edi,0			;condicion de salida
 	jl end_loop
 	mov ecx,0
 	mov ecx,[ebp]
-	dump_regs 1
 	cmp edx,0
 	jz avanzar			
 	mov esi,0			;valor!=0	esi=0	esi=posicion-1
@@ -51,7 +48,6 @@ while_potencia:
 	jmp while_potencia
 
 end_potencia:
-
 	imul eax,ecx		;resultado = valor*resultado => resultado es el expoente elevado a la posicion-1
 	add edx,eax			;resultado final = resultado final+resultado
 
@@ -62,8 +58,7 @@ avanzar:
 
 end_loop:
 	mov eax,edx			;eax = resultado final
-	push eax	
-	dump_regs 0
+	push eax
 	mov esp,ebp
 	pop ebp
 	ret
