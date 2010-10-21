@@ -65,6 +65,5 @@ end_loop:
 	push eax	
 	dump_regs 0
 	mov esp,ebp
-	dump_regs 222
 	pop ebp
 	ret
