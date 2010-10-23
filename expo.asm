@@ -1,5 +1,7 @@
+;Proyecto de Orgenizacion del Procesador
+;Alvarez, Matías - Barale Mayco - Bernal Matías
+;Año 2010
 %include "asm_io.inc"
-
 segment  .data
 	exp dd 8
 	A dd 1,1,1,1	;249 en exadecimal
