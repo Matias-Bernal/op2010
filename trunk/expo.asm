@@ -5,8 +5,8 @@
 %include "asm_io.inc"
 segment  .data
 	exp dd 8
-	A dd 1,1,1,1	;249 en exadecimal
-	;A dd 0,0,0,1	;1 en exadecimal
+	;A dd 1,1,1,1	;249 en exadecimal
+	A dd 0,0,0,1	;1 en exadecimal
 
 segment .bss
 
